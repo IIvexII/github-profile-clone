@@ -16,20 +16,29 @@ export default function Header() {
         ******************************/}
         <div className='search-bar'>
           <input placeholder='Search or jump to....' type='text' />
+          <i>/</i>
         </div>
         {/****************************
                 Navigation Bar 
         ******************************/}
         <nav class='nav-bar'>
           <ul>
-            <li>Pull requests</li>
-            <li>Issues</li>
-            <li>Marketplace</li>
-            <li>Explore</li>
+            <li>
+              <a href='.'>Pull requests</a>
+            </li>
+            <li>
+              <a href='.'>Issues</a>
+            </li>
+            <li>
+              <a href='.'>Marketplace</a>
+            </li>
+            <li>
+              <a href='.'>Explore</a>
+            </li>
           </ul>
         </nav>
       </section>
-      <section></section>
+      <section className=''></section>
     </header>
   );
 }
