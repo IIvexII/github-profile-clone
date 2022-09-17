@@ -26,7 +26,7 @@
       font-size: 14px;
       padding: 5px 12px;
       background-color: transparent;
-      border: 1px solid #a5a5a5;
+      border: 1px solid #646464;
       border-radius: 5px;
       color: #ffffff;
       width: 250px;
@@ -37,11 +37,10 @@
       }
       .search-bar i {
         font-size: 10px;
-        position: relative;
-        top: -1px;
-        left: -28px;
         border: 1px solid #5f5f5f;
         padding: 2px 8px;
+        padding-top: 6px;
+        margin-left: -26px;
         border-radius: 4px;
       }
     /* Unordered List */
