@@ -12,9 +12,10 @@
   /* Section 1 */
   .header .section-1 {
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
     align-items: center;
-    width: 50%;
+    width: 100%;
+    gap: 20px;
   }
     /* Logo */
     .header .section-1 .logo {
