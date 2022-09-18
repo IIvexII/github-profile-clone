@@ -22,6 +22,7 @@
       align-items: center;
       fill: #ffffff;
     }
+    /* Search Bar */
     .header .section-1 .search-bar input{
       font-size: 14px;
       padding: 5px 12px;

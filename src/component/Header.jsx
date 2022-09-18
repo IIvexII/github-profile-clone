@@ -21,7 +21,7 @@ export default function Header() {
         {/****************************
                 Navigation Bar 
         ******************************/}
-        <nav class='nav-bar'>
+        <nav className='nav-bar'>
           <ul>
             <li>
               <a href='.'>Pull requests</a>
@@ -38,7 +38,6 @@ export default function Header() {
           </ul>
         </nav>
       </section>
-      <section className=''></section>
     </header>
   );
 }
