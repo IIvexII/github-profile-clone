@@ -10,6 +10,8 @@ export default function UserInfo() {
       <article>
         <h2 className='name'>Zafeer Hafeez</h2>
         <h2 className='username'>IIvexII</h2>
+        <p className='bio'>Student of Computer Science.</p>
+        <button type='button'>Edit profile</button>
       </article>
     </section>
   );
