@@ -9,6 +9,15 @@ export default function App() {
     <Fragment>
       <Header />
       <Tabs />
+      <main>
+        <section className='user-info'>
+          <img
+            src={require('./images/avatar.jpg')}
+            alt='My avatar with yellow background and headphones on the ear.'
+            className='user-avatar'
+          />
+        </section>
+      </main>
     </Fragment>
   );
 }

@@ -1,4 +1,4 @@
-import Logo from '../images/Logo';
+import { ReactComponent as Logo } from '../images/logo.svg';
 import './Header.css';
 
 export default function Header() {
