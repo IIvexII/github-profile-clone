@@ -1,0 +1,17 @@
+.user-info {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-left: 60px;
+  margin-top: -60px;
+}
+  .user-info >  .user-avatar{
+    width:300px;
+    border: 1px solid rgb(190, 190, 190);
+    border-radius: 100%;
+  }
+  .user-info article {
+    margin-top: 20px;
+  }
+    .username {
+      color: rgb(93, 93, 93);
+      font-weight: 100;
+    }
