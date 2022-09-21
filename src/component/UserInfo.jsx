@@ -13,10 +13,10 @@ export default function UserInfo() {
         <p className='bio'>Student of Computer Science.</p>
         <button type='button'>Edit profile</button>
         <div id='follow'>
-          <a href='#'>
+          <a href='/'>
             <span className='bold'>6</span> followers
           </a>
-          <a href='#'>
+          <a href='/'>
             <span className='bold'>2</span> following
           </a>
         </div>
