@@ -18,19 +18,24 @@ export default function UserInfo() {
         <button type='button'>Edit profile</button>
         {/* Followers */}
         <div id='follow'>
-          <a href='/'>
+          <a href='/' className='link'>
             <UserIcon className='icon' />
             <span className='bold'>6</span> followers
           </a>
-          <a href='/'>
+          <a href='/' className='link'>
             <span className='bold'>2</span> following
           </a>
         </div>
         {/* Addesss and social media links */}
-        <address>
-          <LocationIcon className='icon' />
-          127.0.0.1
-        </address>
+        <div className='social-info'>
+          <address>
+            <LocationIcon className='icon' />
+            127.0.0.1
+          </address>
+          <a className='link' href='mailto:iivexii@pm.me'>
+            iivexii@pm.me
+          </a>
+        </div>
       </article>
     </section>
   );
