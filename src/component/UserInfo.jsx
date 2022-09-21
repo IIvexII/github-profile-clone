@@ -12,6 +12,14 @@ export default function UserInfo() {
         <h2 className='username'>IIvexII</h2>
         <p className='bio'>Student of Computer Science.</p>
         <button type='button'>Edit profile</button>
+        <div id='follow'>
+          <a href='#'>
+            <span className='bold'>6</span> followers
+          </a>
+          <a href='#'>
+            <span className='bold'>2</span> following
+          </a>
+        </div>
       </article>
     </section>
   );
