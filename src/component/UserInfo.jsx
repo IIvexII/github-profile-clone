@@ -1,4 +1,7 @@
 import './UserInfo.css';
+import { ReactComponent as LocationIcon } from '../images/location.svg';
+import { ReactComponent as UserIcon } from '../images/userIcon.svg';
+
 export default function UserInfo() {
   return (
     <section className='user-info'>
@@ -14,6 +17,7 @@ export default function UserInfo() {
         <button type='button'>Edit profile</button>
         <div id='follow'>
           <a href='/'>
+            <UserIcon className='user-icon' />
             <span className='bold'>6</span> followers
           </a>
           <a href='/'>
