@@ -1,6 +1,11 @@
 import './UserInfo.css';
+
+// Icons
 import { ReactComponent as LocationIcon } from '../images/location.svg';
 import { ReactComponent as UserIcon } from '../images/userIcon.svg';
+import { ReactComponent as EmailIcon } from '../images/email.svg';
+import { ReactComponent as LinkIcon } from '../images/link.svg';
+import { ReactComponent as TwitterIcon } from '../images/twitter.svg';
 
 export default function UserInfo() {
   return (
@@ -28,12 +33,20 @@ export default function UserInfo() {
         </div>
         {/* Addesss and social media links */}
         <div className='social-info'>
+          {/* Location */}
           <address>
             <LocationIcon className='icon' />
             127.0.0.1
           </address>
-          <a className='link' href='mailto:iivexii@pm.me'>
+          {/* Email */}
+          <a className='link pt-10' href='mailto:iivexii@pm.me'>
+            <EmailIcon className='icon' />
             iivexii@pm.me
+          </a>
+          {/* Website */}
+          <a className='link pt-10' href='https://iivexii.me'>
+            <LinkIcon className='icon' />
+            https://iivexii.me
           </a>
         </div>
       </article>

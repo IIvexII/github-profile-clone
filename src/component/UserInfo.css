@@ -54,6 +54,9 @@
       font-style: normal;
     }
 
+    .user-info article .social-info a {
+      display: block;
+    }
 /* General Rules */
 .icon {
   margin-right: 10px;
@@ -64,4 +67,7 @@
 }
 .link:hover {
   color: #3e7ce0 !important;
+}
+.pt-10 {
+  padding-top: 10px;
 }
