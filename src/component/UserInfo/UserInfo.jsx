@@ -1,7 +1,7 @@
 import '../UserInfo.css';
 
 // Components
-import DeveloperProgram from './DevProgram';
+import DeveloperProgram from './DeveloperProgram';
 
 // Icons
 import { UserIcon, EmailIcon, LinkIcon, StarIcon, LocationIcon } from './icons';
