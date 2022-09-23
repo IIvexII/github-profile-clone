@@ -8,28 +8,78 @@ import { ReactComponent as LinkIcon } from '../images/link.svg';
 import { ReactComponent as DevProgramIcon } from '../images/dev-program.svg';
 import { ReactComponent as StarIcon } from '../images/star.svg';
 
-export default function UserInfo() {
+export default function UserInfo(props) {
+  const user = props.user;
+
+  // Dev Program
+  let renderDevProgram = null;
+  if (user.inDeveloperProgram) {
+    renderDevProgram = (
+      <a className='link pt-10' href='/'>
+        <DevProgramIcon className='icon' />
+        Developer Program Member
+      </a>
+    );
+  }
+
+  // Render Labels
+  let renderLabels = null;
+  if (user.labels && user.labels.length !== 0) {
+    renderLabels = (
+      <span className='labels pt-10'>
+        <StarIcon />
+        {user.labels.map((label) => {
+          return (
+            <p key={label._id} className={`label ${label.type} ml-10`}>
+              {label.name}
+            </p>
+          );
+        })}
+      </span>
+    );
+  }
+
+  // Render Orgs
+  let renderOrgs = null;
+  if (user.orgs && user.orgs.length !== 0) {
+    renderOrgs = (
+      <div className='orgs'>
+        <h3 className='title'>Organizations</h3>
+        {user.orgs.map((org) => {
+          return (
+            <a href='/' key={org._id}>
+              <img
+                className='org-img mtb-20 mr-10'
+                src={require(`../images/${org.icon}`)}
+                alt={user.orgs.description}
+              />
+            </a>
+          );
+        })}
+      </div>
+    );
+  }
   return (
     <section className='user-info'>
       <img
-        src={require('../images/avatar.jpg')}
-        alt='My avatar with yellow background and headphones on the ear.'
+        src={require(`../images/${user.avatar.url}`)}
+        alt={user.avatar.description}
         className='user-avatar'
       />
       <article>
-        <h2 className='name'>Zafeer Hafeez</h2>
-        <h2 className='username'>IIvexII</h2>
-        <p className='bio'>Student of Computer Science.</p>
+        <h2 className='name'>{user.name}</h2>
+        <h2 className='username'>{user.username}</h2>
+        <p className='bio'>{user.bio}</p>
         {/* Edit button */}
         <button type='button'>Edit profile</button>
         {/* Followers */}
         <div id='follow'>
           <a href='/' className='link'>
             <UserIcon className='icon' />
-            <span className='bold'>6</span> followers
+            <span className='bold'>{user.followers}</span> followers
           </a>
           <a href='/' className='link'>
-            <span className='bold'>2</span> following
+            <span className='bold'>{user.following}</span> following
           </a>
         </div>
         {/* Addesss and social media links */}
@@ -37,52 +87,35 @@ export default function UserInfo() {
           {/* Location */}
           <address>
             <LocationIcon className='icon' />
-            127.0.0.1
+            {user.address}
           </address>
           {/* Email */}
           <a className='link pt-10' href='mailto:iivexii@pm.me'>
             <EmailIcon className='icon' />
-            iivexii@pm.me
+            {user.email}
           </a>
           {/* Website */}
-          <a className='link pt-10' href='https://iivexii.me'>
+          <a
+            className='link pt-10'
+            href={user.website}
+            rel='noreferrer'
+            target='_blank'>
             <LinkIcon className='icon' />
-            https://iivexii.me
+            {user.website}
           </a>
         </div>
         <div className='divider mtb-20'></div>
         {/* Showcase */}
         <div className='showcase'>
-          <a className='link pt-10' href='/'>
-            <DevProgramIcon className='icon' />
-            Developer Program Member
-          </a>
+          {/* Only show if in dev program */}
+          {renderDevProgram}
+
           {/* Labels */}
-          <span className='labels pt-10'>
-            <StarIcon />
-            <p className='label premium mlr-10'>pro</p>
-            <p className='label gold'>Developer</p>
-          </span>
+          {renderLabels}
         </div>
         <div className='divider mtb-20'></div>
         {/* Organizations */}
-        <div className='orgs'>
-          <h3 className='title'>Organizations</h3>
-          <a href='/'>
-            <img
-              className='org-img mtb-20 mr-10'
-              src={require('../images/org-img.jpg')}
-              alt='Vex organization.'
-            />
-          </a>
-          <a href='/'>
-            <img
-              className='org-img mtb-20 mr-10'
-              src={require('../images/npm-org.png')}
-              alt='NPM organization.'
-            />
-          </a>
-        </div>
+        {renderOrgs}
       </article>
     </section>
   );

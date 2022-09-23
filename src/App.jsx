@@ -4,6 +4,7 @@ import Header from './component/Header';
 import './App.css';
 import Tabs from './component/Tabs';
 import UserInfo from './component/UserInfo';
+import userData from './model/User';
 
 export default function App() {
   return (
@@ -11,7 +12,7 @@ export default function App() {
       <Header />
       <Tabs />
       <main>
-        <UserInfo />
+        <UserInfo user={userData} />
       </main>
     </Fragment>
   );
