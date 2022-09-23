@@ -4,28 +4,12 @@ import '../UserInfo.css';
 import DeveloperProgram from './DeveloperProgram';
 
 // Icons
-import { UserIcon, EmailIcon, LinkIcon, StarIcon, LocationIcon } from './icons';
+import { UserIcon, EmailIcon, LinkIcon, LocationIcon } from './icons';
+import Labels from './Labels';
 import Organizations from './Organizations';
 
 export default function UserInfo(props) {
   const user = props.user;
-
-  // Render Labels
-  let renderLabels = null;
-  if (user.labels && user.labels.length !== 0) {
-    renderLabels = (
-      <span className='labels pt-10'>
-        <StarIcon />
-        {user.labels.map((label) => {
-          return (
-            <p key={label._id} className={`label ${label.type} ml-10`}>
-              {label.name}
-            </p>
-          );
-        })}
-      </span>
-    );
-  }
 
   return (
     <section className='user-info'>
@@ -79,7 +63,7 @@ export default function UserInfo(props) {
           <DeveloperProgram show={user.inDeveloperProgram} />
 
           {/* Labels */}
-          {renderLabels}
+          <Labels labels={user.labels} />
         </div>
         <div className='divider mtb-20'></div>
         {/* Organizations */}
