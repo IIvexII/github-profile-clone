@@ -3,7 +3,6 @@ import './UserInfo.css';
 // Components
 import DeveloperProgram from './DeveloperProgram';
 import Divider from './Divider';
-
 import Labels from './Labels';
 import Organizations from './Organizations';
 import SocialInfo from './SocialInfo';
