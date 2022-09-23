@@ -95,7 +95,7 @@ export default function UserInfo(props) {
         {/* Showcase */}
         <div className='showcase'>
           {/* Only show if in dev program */}
-          <DeveloperProgram inDeveloperProgram={user.inDeveloperProgram} />
+          <DeveloperProgram show={user.inDeveloperProgram} />
 
           {/* Labels */}
           {renderLabels}
