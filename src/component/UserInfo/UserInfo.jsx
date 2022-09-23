@@ -1,12 +1,14 @@
-import '../UserInfo.css';
+import './UserInfo.css';
 
 // Components
 import DeveloperProgram from './DeveloperProgram';
+import Divider from './Divider';
 
 // Icons
-import { UserIcon, EmailIcon, LinkIcon, LocationIcon } from './icons';
+import { UserIcon } from './icons';
 import Labels from './Labels';
 import Organizations from './Organizations';
+import SocialInfo from './SocialInfo';
 
 export default function UserInfo(props) {
   const user = props.user;
@@ -35,38 +37,20 @@ export default function UserInfo(props) {
           </a>
         </div>
         {/* Addesss and social media links */}
-        <div className='social-info'>
-          {/* Location */}
-          <address>
-            <LocationIcon className='icon' />
-            {user.address}
-          </address>
-          {/* Email */}
-          <a className='link pt-10' href='mailto:iivexii@pm.me'>
-            <EmailIcon className='icon' />
-            {user.email}
-          </a>
-          {/* Website */}
-          <a
-            className='link pt-10'
-            href={user.website}
-            rel='noreferrer'
-            target='_blank'>
-            <LinkIcon className='icon' />
-            {user.website}
-          </a>
-        </div>
-        <div className='divider mtb-20'></div>
-        {/* Showcase */}
-        <div className='showcase'>
-          {/* Only show if in dev program */}
-          <DeveloperProgram show={user.inDeveloperProgram} />
+        <SocialInfo
+          email={user.email}
+          address={user.address}
+          website={user.website}
+        />
 
-          {/* Labels */}
-          <Labels labels={user.labels} />
-        </div>
-        <div className='divider mtb-20'></div>
-        {/* Organizations */}
+        <Divider />
+
+        {/* Showcase */}
+        <DeveloperProgram show={user.inDeveloperProgram} />
+        <Labels labels={user.labels} />
+
+        <Divider />
+
         <Organizations orgs={user.orgs} />
       </article>
     </section>
