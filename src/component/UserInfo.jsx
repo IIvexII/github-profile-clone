@@ -5,7 +5,6 @@ import { ReactComponent as LocationIcon } from '../images/location.svg';
 import { ReactComponent as UserIcon } from '../images/userIcon.svg';
 import { ReactComponent as EmailIcon } from '../images/email.svg';
 import { ReactComponent as LinkIcon } from '../images/link.svg';
-import { ReactComponent as TwitterIcon } from '../images/twitter.svg';
 
 export default function UserInfo() {
   return (
