@@ -9,21 +9,17 @@ import { UserIcon } from './icons';
 import Labels from './Labels';
 import Organizations from './Organizations';
 import SocialInfo from './SocialInfo';
+import Avatar from './Avatar';
+import GeneralInfo from './GeneralInfo';
 
 export default function UserInfo(props) {
   const user = props.user;
 
   return (
     <section className='user-info'>
-      <img
-        src={require(`../../images/${user.avatar.url}`)}
-        alt={user.avatar.description}
-        className='user-avatar'
-      />
+      <Avatar avatar={user.avatar} />
       <article>
-        <h2 className='name'>{user.name}</h2>
-        <h2 className='username'>{user.username}</h2>
-        <p className='bio'>{user.bio}</p>
+        <GeneralInfo name={user.name} username={user.username} bio={user.bio} />
         {/* Edit button */}
         <button type='button'>Edit profile</button>
         {/* Followers */}
