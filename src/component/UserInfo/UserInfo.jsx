@@ -1,27 +1,13 @@
 import '../UserInfo.css';
 
-import {
-  UserIcon,
-  EmailIcon,
-  LinkIcon,
-  DevProgramIcon,
-  StarIcon,
-  LocationIcon,
-} from './icons';
+// Components
+import DeveloperProgram from './DevProgram';
+
+// Icons
+import { UserIcon, EmailIcon, LinkIcon, StarIcon, LocationIcon } from './icons';
 
 export default function UserInfo(props) {
   const user = props.user;
-
-  // Dev Program
-  let renderDevProgram = null;
-  if (user.inDeveloperProgram) {
-    renderDevProgram = (
-      <a className='link pt-10' href='/'>
-        <DevProgramIcon className='icon' />
-        Developer Program Member
-      </a>
-    );
-  }
 
   // Render Labels
   let renderLabels = null;
@@ -109,7 +95,7 @@ export default function UserInfo(props) {
         {/* Showcase */}
         <div className='showcase'>
           {/* Only show if in dev program */}
-          {renderDevProgram}
+          <DeveloperProgram inDeveloperProgram={user.inDeveloperProgram} />
 
           {/* Labels */}
           {renderLabels}
