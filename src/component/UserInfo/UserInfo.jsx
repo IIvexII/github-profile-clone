@@ -1,12 +1,13 @@
-import './UserInfo.css';
+import '../UserInfo.css';
 
-// Icons
-import { ReactComponent as LocationIcon } from '../images/location.svg';
-import { ReactComponent as UserIcon } from '../images/userIcon.svg';
-import { ReactComponent as EmailIcon } from '../images/email.svg';
-import { ReactComponent as LinkIcon } from '../images/link.svg';
-import { ReactComponent as DevProgramIcon } from '../images/dev-program.svg';
-import { ReactComponent as StarIcon } from '../images/star.svg';
+import {
+  UserIcon,
+  EmailIcon,
+  LinkIcon,
+  DevProgramIcon,
+  StarIcon,
+  LocationIcon,
+} from './icons';
 
 export default function UserInfo(props) {
   const user = props.user;
@@ -50,7 +51,7 @@ export default function UserInfo(props) {
             <a href='/' key={org._id}>
               <img
                 className='org-img mtb-20 mr-10'
-                src={require(`../images/${org.icon}`)}
+                src={require(`../../images/${org.icon}`)}
                 alt={user.orgs.description}
               />
             </a>
@@ -62,7 +63,7 @@ export default function UserInfo(props) {
   return (
     <section className='user-info'>
       <img
-        src={require(`../images/${user.avatar.url}`)}
+        src={require(`../../images/${user.avatar.url}`)}
         alt={user.avatar.description}
         className='user-avatar'
       />
