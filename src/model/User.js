@@ -7,7 +7,7 @@ const userData = {
   name: 'Zafeer Hafeez',
   username: 'IIvexII',
   bio: 'Student of Computer Science.',
-  followers: '70000',
+  followers: '7133454',
   following: '50900',
   address: '127.0.0.1',
   email: 'iivexii@pm.me',

@@ -4,13 +4,12 @@ import './UserInfo.css';
 import DeveloperProgram from './DeveloperProgram';
 import Divider from './Divider';
 
-// Icons
-import { UserIcon } from './icons';
 import Labels from './Labels';
 import Organizations from './Organizations';
 import SocialInfo from './SocialInfo';
 import Avatar from './Avatar';
 import GeneralInfo from './GeneralInfo';
+import Followers from './Followers';
 
 export default function UserInfo(props) {
   const user = props.user;
@@ -23,15 +22,7 @@ export default function UserInfo(props) {
         {/* Edit button */}
         <button type='button'>Edit profile</button>
         {/* Followers */}
-        <div id='follow'>
-          <a href='/' className='link'>
-            <UserIcon className='icon' />
-            <span className='bold'>{user.followers}</span> followers
-          </a>
-          <a href='/' className='link'>
-            <span className='bold'>{user.following}</span> following
-          </a>
-        </div>
+        <Followers followers={user.followers} following={user.following} />
         {/* Addesss and social media links */}
         <SocialInfo
           email={user.email}
