@@ -1,29 +1,26 @@
 import './style.css';
 
-// Icons
-import { EditIcon, ProfileCountIcon } from './icons';
+// Component
+import Card from './Card';
 
 export default function Overview() {
+  const editReadMeCard = {
+    breadcrumbs: [
+      {
+        type: 'link',
+        url: '/',
+        content: 'IIvexII',
+      },
+      {
+        type: 'text',
+        content: 'README',
+        extension: 'md',
+      },
+    ],
+  };
   return (
     <div className='overview'>
-      <div className='card'>
-        <div className='card-head'>
-          {/* Breadcrumb */}
-          <ul className='breadcrumb'>
-            <li>
-              <a className='semi-link' href='/'>
-                IIvexII
-              </a>
-            </li>
-            <li>
-              README<span className='text-gray'>.md</span>
-            </li>
-          </ul>
-          <EditIcon />
-        </div>
-        {/* Profile Count SVG */}
-        <ProfileCountIcon className='mt-20' />
-      </div>
+      <Card data={editReadMeCard} />
     </div>
   );
 }
