@@ -1,4 +1,4 @@
-import './UserInfo.css';
+import './style.css';
 
 // Components
 import DeveloperProgram from './DeveloperProgram';
