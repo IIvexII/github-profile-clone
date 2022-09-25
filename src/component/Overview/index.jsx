@@ -5,6 +5,7 @@ import Card from './Card';
 
 export default function Overview() {
   const editReadMeCard = {
+    dragable: true,
     breadcrumbs: [
       {
         type: 'link',

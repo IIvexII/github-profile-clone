@@ -1,17 +1,23 @@
 // Icons
 import { Component } from 'react';
-import { EditIcon, ProfileCountIcon } from './icons';
+import { DragIcon, EditIcon, ProfileCountIcon } from './icons';
 
 export default class Card extends Component {
+  constructor(props) {
+    super(props);
+
+    this.breadcrumbs = this.props.data.breadcrumbs;
+    this.editable = this.props.data.editable;
+    this.dragable = this.props.data.dragable;
+  }
   /*
    * This Function will generate the breadcrumbs for the Card
    *
    * @params: none
-   * @return: listItems <JSX containing ul with list>
+   * @return: listItems <JSX containing ul with list of content>
    */
   generateBreadCrumbs() {
-    const breadcrumbs = this.props.data.breadcrumbs;
-    let listItems = breadcrumbs.map((val) => {
+    let listItems = this.breadcrumbs.map((val) => {
       if (val.type === 'link') {
         return (
           <li>
@@ -32,16 +38,35 @@ export default class Card extends Component {
       }
       return null;
     });
+
     return <ul className='breadcrumb'>{listItems.map((val) => val)}</ul>;
   }
+  renderActionButton() {
+    if (this.editable) {
+      // Editable
+      return (
+        <a id='edit-icon' href='/'>
+          <EditIcon />
+        </a>
+      );
+    } else if (this.dragable) {
+      // Dragable
+      return (
+        <a id='drag-icon' href='/'>
+          <DragIcon />
+        </a>
+      );
+    }
+  }
+
+  // Render the Card
   render() {
     return (
       <div className='card'>
         <div className='card-head'>
           {/* Breadcrumb */}
           {this.generateBreadCrumbs()}
-          {/* Edit icon on right most corner of the card */}
-          <EditIcon />
+          {this.renderActionButton()}
         </div>
         {/* Profile Count SVG */}
         <ProfileCountIcon className='mt-20' />

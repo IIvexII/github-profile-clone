@@ -15,36 +15,6 @@
   font-weight: bold;
   color: black;
 }
-/* Card */
-  .card {
-    margin-top: 20px;
-    width: 100%;
-    border: 1px solid rgb(195, 195, 195);
-    border-radius: 4px;
-    padding: 20px 30px;
-  }
-  .card .card-head {
-    display: flex;
-    justify-content: space-between;
-  }
-  .card .breadcrumb {
-    font-family:'Courier New', Courier, monospace;
-    font-size: 12px;
-    display: flex;
-    list-style: none;
-  }
-  .card .breadcrumb .semi-link {
-    color: #323232 ;
-    text-decoration: none;
-  }
-    .card .breadcrumb .semi-link:hover {
-      color: #4f57fe;
-    }
-  /* Add a slash before every list element except the first one. */
-  .card .breadcrumb li:not(.breadcrumb li:first-child):before {
-    content: '/';
-    padding: 0 5px;
-  } 
 /* Labels */
 .label {
   display: inline;
