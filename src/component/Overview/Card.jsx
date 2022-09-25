@@ -1,6 +1,6 @@
 // Icons
 import { Component } from 'react';
-import { DragIcon, EditIcon, ProfileCountIcon } from './icons';
+import { DragIcon, EditIcon } from './icons';
 
 export default class Card extends Component {
   constructor(props) {
@@ -68,8 +68,7 @@ export default class Card extends Component {
           {this.generateBreadCrumbs()}
           {this.renderActionButton()}
         </div>
-        {/* Profile Count SVG */}
-        <ProfileCountIcon className='mt-20' />
+        <div className='content'>{this.props.children}</div>
       </div>
     );
   }

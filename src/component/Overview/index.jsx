@@ -2,6 +2,7 @@ import './style.css';
 
 // Component
 import Card from './Card';
+import { ProfileCountIcon } from './icons';
 
 export default function Overview() {
   const editReadMeCard = {
@@ -21,7 +22,10 @@ export default function Overview() {
   };
   return (
     <div className='overview'>
-      <Card data={editReadMeCard} />
+      <Card data={editReadMeCard}>
+        {/* Profile Count SVG */}
+        <ProfileCountIcon className='mt-20' />
+      </Card>
     </div>
   );
 }
