@@ -1,9 +1,14 @@
 import { Fragment } from 'react';
 
-import Header from './component/Header';
+// Css
 import './App.css';
+
+// Components
+import Header from './component/Header';
 import Tabs from './component/Tabs';
 import UserInfo from './component/UserInfo';
+
+// Model
 import userData from './model/User';
 
 export default function App() {
@@ -13,6 +18,7 @@ export default function App() {
       <Tabs />
       <main>
         <UserInfo user={userData} />
+        <Overview />
       </main>
     </Fragment>
   );
