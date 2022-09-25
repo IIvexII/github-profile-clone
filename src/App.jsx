@@ -17,7 +17,7 @@ export default function App() {
     <Fragment>
       <Header />
       <Tabs />
-      <main>
+      <main className='main'>
         <UserInfo user={userData} />
         <Overview />
       </main>
