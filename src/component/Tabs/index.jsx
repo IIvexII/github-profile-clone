@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import './Tabs.css';
+import './style.css';
 export default function Tabs() {
   return (
     <Fragment>

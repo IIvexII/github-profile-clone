@@ -7,6 +7,7 @@ import './App.css';
 import Header from './component/Header';
 import Tabs from './component/Tabs';
 import UserInfo from './component/UserInfo';
+import Overview from './component/Overview';
 
 // Model
 import userData from './model/User';

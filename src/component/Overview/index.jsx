@@ -1,1 +1,7 @@
-export default function Overview() {}
+export default function Overview() {
+  return (
+    <div className='overview'>
+      <div className='card'></div>
+    </div>
+  );
+}
