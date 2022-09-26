@@ -1,4 +1,5 @@
 .overview {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   width: 70%;
 }
 /* Card */
@@ -19,13 +20,6 @@
   display: flex;
   list-style: none;
 }
-.card .breadcrumb .semi-link {
-  color: #323232 ;
-  text-decoration: none;
-}
-  .card .breadcrumb .semi-link:hover {
-    color: #4f57fe;
-  }
 /* Add a slash before every list element except the first one. */
 .card .breadcrumb li:not(.breadcrumb li:first-child):before {
   content: '/';

@@ -3,7 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+body {
+  color: #323232;
+}
 .main {
   display: flex;
   justify-content:space-evenly;
@@ -11,6 +13,13 @@
 }
 
 /* general class */
+.semi-link {
+  color: #323232 ;
+  text-decoration: none;
+}
+  .semi-link:hover {
+    color: #4f57fe;
+  }
 .bold {
   font-weight: bold;
   color: black;
@@ -38,6 +47,19 @@
 .text-gray {
   color: #666666;
 }
+/* Text-sizes */
+.text-sm {
+  font-size: 12px;
+}
+
+/* Flex */
+.flex {
+  display: flex;
+}
+  /* Space between */
+  .flex.jc-sb {
+    justify-content: space-between;
+  }
 /* Padding */
   .pt-10 {
     padding-top: 10px;
