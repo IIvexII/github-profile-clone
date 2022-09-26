@@ -13,4 +13,4 @@ export const editReadMeData = {
     },
   ],
 };
-export const pinnedCards = [{}];
+export const pinnedCard = {};
