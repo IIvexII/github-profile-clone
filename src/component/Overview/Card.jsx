@@ -7,7 +7,8 @@ import { DragIcon, EditIcon } from './icons';
     editable: bool (optional),
     dragable: bool (optional),
     breadcrumbs: Array <{ 
-      type: 'link' | 'text', content: string,
+      type: 'link' | 'text',
+      content: string,
       url: string (when type is link), 
       extension: string (optional)
     }>
@@ -20,6 +21,7 @@ export default class Card extends Component {
     this.breadcrumbs = this.props.data.breadcrumbs;
     this.editable = this.props.data.editable;
     this.dragable = this.props.data.dragable;
+    this.description = this.props.data.description;
   }
   /*
    * This Function will generate the breadcrumbs for the Card
@@ -29,15 +31,10 @@ export default class Card extends Component {
    */
   generateBreadCrumbs() {
     let listItems = this.breadcrumbs.map((val) => {
-      if (val.type === 'link') {
-        return (
-          <li>
-            <a className='semi-link' href={val.url}>
-              {val.content}
-            </a>
-          </li>
-        );
-      } else if (val.type === 'text') {
+      // Security check
+      if (!['text', 'link', 'semi-link'].includes(val.type)) return null;
+
+      if (val.type === 'text') {
         return (
           <li>
             {val.content}.
@@ -46,8 +43,15 @@ export default class Card extends Component {
             </span>
           </li>
         );
+      } else {
+        return (
+          <li>
+            <a className={val.type} href={val.url}>
+              {val.content}
+            </a>
+          </li>
+        );
       }
-      return null;
     });
 
     return <ul className='breadcrumb'>{listItems.map((val) => val)}</ul>;
@@ -85,12 +89,18 @@ export default class Card extends Component {
    */
   render() {
     return (
-      <div className='card'>
+      <div className={`card ${this.props.className}`}>
         <div className='card-head'>
           {/* Breadcrumb */}
           {this.generateBreadCrumbs()}
           {this.renderActionButton()}
         </div>
+        {/* Description */}
+        {this.description ? (
+          <p className='text-gray text-sm mt-5'>{this.description}</p>
+        ) : (
+          ''
+        )}
         <div className='content'>{this.props.children}</div>
       </div>
     );

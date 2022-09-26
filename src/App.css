@@ -59,6 +59,10 @@ body {
   /* Space between */
   .flex.jc-sb {
     justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .flex.gap-10 {
+    gap: 10px;
   }
 /* Padding */
   .pt-10 {

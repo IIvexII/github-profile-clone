@@ -2,7 +2,7 @@ export const editReadMeData = {
   editable: true,
   breadcrumbs: [
     {
-      type: 'link',
+      type: 'semi-link',
       url: '/',
       content: 'IIvexII',
     },
@@ -13,4 +13,14 @@ export const editReadMeData = {
     },
   ],
 };
-export const pinnedCard = {};
+export const pinnedCard = {
+  dragable: true,
+  breadcrumbs: [
+    {
+      type: 'link',
+      url: '/',
+      content: 'Vex-Co/Astro',
+    },
+  ],
+  description: 'Weather App using APIs with ExpressJS',
+};
