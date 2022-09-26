@@ -80,7 +80,31 @@ export default class Card extends Component {
       );
     }
   }
-
+  /*
+   * Render the description for repo cards.
+   *
+   * @params none
+   *
+   * @return this.description wrapped with <p> tag
+   */
+  renderDescription() {
+    if (this.description) {
+      return <p className='text-gray text-sm mt-5'>{this.description}</p>;
+    }
+  }
+  /*
+   * Render the child content that is nested
+   * inside component's body.
+   *
+   * @params none
+   *
+   * @return this.description
+   */
+  renderChildContent() {
+    if (this.props.children) {
+      <div className='content'>{this.props.children}</div>;
+    }
+  }
   /*
    * Default render method for the component.
    *
@@ -96,12 +120,10 @@ export default class Card extends Component {
           {this.renderActionButton()}
         </div>
         {/* Description */}
-        {this.description ? (
-          <p className='text-gray text-sm mt-5'>{this.description}</p>
-        ) : (
-          ''
-        )}
-        <div className='content'>{this.props.children}</div>
+        {this.renderDescription()}
+
+        {/* Render Children */}
+        {this.renderChildContent}
       </div>
     );
   }
