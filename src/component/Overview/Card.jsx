@@ -6,14 +6,11 @@ import { DragIcon, EditIcon } from './icons';
 * props:  {
     editable: bool (optional),
     dragable: bool (optional),
-    breadcrumbs: [
-      {
-        type: 'link' | 'text',
-        content: string,
-        url: string (when type is link)
-        extension: string (optional),
-      }
-    ]
+    breadcrumbs: Array <{ 
+      type: 'link' | 'text', content: string,
+      url: string (when type is link), 
+      extension: string (optional)
+    }>
   } 
 */
 export default class Card extends Component {
