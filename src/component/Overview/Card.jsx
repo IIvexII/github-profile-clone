@@ -3,7 +3,7 @@ import { Component } from 'react';
 import { DragIcon, EditIcon } from './icons';
 
 /*
-* props:  {
+  props:  {
     editable: bool (optional),
     dragable: bool (optional),
     breadcrumbs: Array <{ 
@@ -52,6 +52,13 @@ export default class Card extends Component {
 
     return <ul className='breadcrumb'>{listItems.map((val) => val)}</ul>;
   }
+  /*
+   * This method is used to render the action
+   * buttons like drag and edit on card.
+   *
+   * @params: none
+   * @return: link containing the Edit Icon or Drag Icon
+   */
   renderActionButton() {
     if (this.editable) {
       // Editable
@@ -70,7 +77,12 @@ export default class Card extends Component {
     }
   }
 
-  // Render the Card
+  /*
+   * Default render method for the component.
+   *
+   * @params: none
+   * @return: JSX of whole card.
+   */
   render() {
     return (
       <div className='card'>
