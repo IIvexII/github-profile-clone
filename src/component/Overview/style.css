@@ -37,47 +37,6 @@
 .card .breadcrumb .link:hover {
   text-decoration: underline;
 }
-.card .before-circle::before {
-  content: '';
-  position:relative;
-  bottom: -3px;
-  display: inline-block;
-  width: 13px;
-  height: 13px;
-  border: 1px solid #929292;
-  border-radius: 100%;
-  margin-right: 5px;
-  background-color: gray;
-}
-  /* Blue circle */
-  .card .before-circle.circle-blue::before {
-    background-color: #012cec;
-  }
-  /* Cyan circle */
-  .card .before-circle.circle-cyan::before {
-    background-color: #43e6ff;
-  }
-  /* Red circle */
-  .card .before-circle.circle-red::before {
-    background-color: #ff3a3acc;
-  }
-  /* Pink circle */
-  .card .before-circle.circle-pink::before {
-    background-color: #ff0095;
-  }
-  /* Green circle */
-  .card .before-circle.circle-green::before {
-    background-color: #367c47;
-  }
-  /* Light green circle */
-  .card .before-circle.circle-light-green::before {
-    background-color: #76fa81;
-  }
-  /* Yellow circle */
-  .card .before-circle.circle-yellow::before {
-    background-color: #f1ec53;
-  }
-
 #edit-icon:hover {
   fill: #2848fe;
   cursor: pointer;

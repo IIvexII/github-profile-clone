@@ -13,6 +13,47 @@ body {
 }
 
 /* general class */
+/* Circles */
+.circle::before {
+  content: '';
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  border: 1px solid #929292;
+  border-radius: 100%;
+  margin-right: 5px;
+  background-color: gray;
+}
+  /* Blue circle */
+  .circle.circle-blue::before {
+    background-color: #012cec;
+  }
+  /* Cyan circle */
+  .circle.circle-cyan::before {
+    background-color: #43e6ff;
+  }
+  /* Red circle */
+  .circle.circle-red::before {
+    background-color: #ff3a3acc;
+  }
+  /* Pink circle */
+  .circle.circle-pink::before {
+    background-color: #ff0095;
+  }
+  /* Green circle */
+  .circle.circle-green::before {
+    background-color: #367c47;
+  }
+  /* Light green circle */
+  .circle.circle-light-green::before {
+    background-color: #76fa81;
+  }
+  /* Yellow circle */
+  .circle.circle-yellow::before {
+    background-color: #f1ec53;
+  }
+
+/* Circles End */
 .semi-link {
   color: #323232 ;
   text-decoration: none;
@@ -59,7 +100,18 @@ body {
   /* Space between */
   .flex.jc-sb {
     justify-content: space-between;
+  }
+  .flex.jc-left {
+    justify-content: left;
+  }
+  .flex.wrap {
     flex-wrap: wrap;
+  }
+  .flex.no-wrap {
+    flex-wrap: no-wrap;
+  }
+  .flex.align-center {
+    align-items: center;
   }
   .flex.gap-10 {
     gap: 10px;

@@ -22,7 +22,7 @@ export default function Overview() {
         </a>
       </div>
       {/* Pinned repos */}
-      <div className='flex jc-sb gap-10 mt-20'>
+      <div className='flex jc-sb wrap gap-10 mt-20'>
         {pinnedCards.map((card, index) => {
           return <Card key={index} className='half-card' data={card} />;
         })}

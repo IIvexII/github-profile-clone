@@ -105,15 +105,14 @@ export default class Card extends Component {
     if (this.languages && this.languages.length > 0) {
       const languages = this.languages.map((language, index) => {
         return (
-          <p
-            key={index}
-            className={`language before-circle circle-${language.circleColor} text-gray text-sm mt-20`}>
-            {language.name}
-          </p>
+          <div key={index} className='flex no-wrap align-center mt-20'>
+            <i className={`mt-5 circle circle-${language.circleColor}`}></i>
+            <span className='text-gray text-sm'>{language.name}</span>
+          </div>
         );
       });
 
-      return <div className='flex gap-10'>{languages}</div>;
+      return <div className='flex wrap jc-left gap-10'>{languages}</div>;
     }
   }
   /*
