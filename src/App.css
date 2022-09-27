@@ -92,6 +92,9 @@ body {
 .text-sm {
   font-size: 12px;
 }
+.line-height-2 {
+  line-height: 1.2rem;
+}
 
 /* Flex */
 .flex {

@@ -85,7 +85,11 @@ export default class Card extends Component {
    */
   renderDescription() {
     if (this.description) {
-      return <p className='text-gray text-sm mt-5'>{this.description}</p>;
+      return (
+        <p className='line-height-2 text-gray text-sm mt-5 mr-20'>
+          {this.description}
+        </p>
+      );
     }
   }
   /*
