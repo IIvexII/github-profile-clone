@@ -4,14 +4,16 @@ import { DragIcon, EditIcon } from './icons';
 
 /*
   props:  {
-    editable: bool (optional),
-    dragable: bool (optional),
-    breadcrumbs: Array <{ 
-      type: 'link' | 'text',
-      content: string,
-      url: string (when type is link), 
-      extension: string (optional)
-    }>
+    1. editable: bool (optional),
+    2. dragable: bool (optional),
+    3. breadcrumbs: Array <{ 
+        type: 'link' | 'text',
+        content: string,
+        url: string (when type is link), 
+        extension: string (optional)
+      }>,
+    4. description: string (opional),
+    5. languages: Array < Object{name: string, circleColor} >
   } 
 */
 export default class Card extends Component {
