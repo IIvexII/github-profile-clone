@@ -5,7 +5,7 @@ import Card from './Card';
 import { ProfileCountIcon } from './icons';
 
 // Data for the cards
-import { editReadMeData, pinnedCards } from './cardData';
+import { editReadMeData, pinnedCards } from './repoData';
 
 export default function Overview() {
   return (
