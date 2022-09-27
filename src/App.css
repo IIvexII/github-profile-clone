@@ -61,6 +61,13 @@ body {
   .semi-link:hover {
     color: #4f57fe;
   }
+  .blue-link {
+    color: #4f57fe;
+    text-decoration: none;
+  }
+  .blue-link:hover {
+    text-decoration: underline;
+  }
 .bold {
   font-weight: bold;
   color: black;
@@ -177,6 +184,9 @@ body {
   .mt-20 {
     margin-top: 20px;
   }
+  .mt-30 {
+    margin-top: 30px;
+  }
   /* Bottom */
   .mb-5 {
     margin-bottom: 5px;
@@ -186,4 +196,13 @@ body {
   }
   .mb-20 {
     margin-bottom: 20px;
+  }
+  .mb-30 {
+    margin-bottom: 30px;
+  }
+  .mb-40 {
+    margin-bottom: 40px;
+  }
+  .mb-50 {
+    margin-bottom: 50px;
   }
