@@ -5,8 +5,8 @@
 }
   /* User Avatar */
   .user-info >  .user-avatar{
-    width: 300px;
-    border: 1px solid rgb(190, 190, 190);
+    width: 100%;
+    border: 1px solid #bebebe;
     border-radius: 100%;
   }
   .user-info article {
