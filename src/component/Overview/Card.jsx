@@ -22,6 +22,8 @@ export default class Card extends Component {
     this.editable = this.props.data.editable;
     this.dragable = this.props.data.dragable;
     this.description = this.props.data.description;
+    this.languages = this.props.data.languages;
+    this.circleColor = this.props.data.circleColor || 'gray';
   }
   /*
    * This Function will generate the breadcrumbs for the Card
@@ -30,13 +32,13 @@ export default class Card extends Component {
    * @return: listItems <JSX containing ul with list of content>
    */
   generateBreadCrumbs() {
-    let listItems = this.breadcrumbs.map((val) => {
+    let listItems = this.breadcrumbs.map((val, index) => {
       // Security check
       if (!['text', 'link', 'semi-link'].includes(val.type)) return null;
 
       if (val.type === 'text') {
         return (
-          <li>
+          <li key={index}>
             {val.content}.
             <span className='text-gray'>
               {val.extension ? val.extension : ''}
@@ -45,7 +47,7 @@ export default class Card extends Component {
         );
       } else {
         return (
-          <li>
+          <li key={index}>
             <a className={val.type} href={val.url}>
               {val.content}
             </a>
@@ -66,18 +68,10 @@ export default class Card extends Component {
   renderActionButton() {
     if (this.editable) {
       // Editable
-      return (
-        <a id='edit-icon' href='/'>
-          <EditIcon />
-        </a>
-      );
+      return <EditIcon id='edit-icon' />;
     } else if (this.dragable) {
       // Dragable
-      return (
-        <a id='drag-icon' href='/'>
-          <DragIcon />
-        </a>
-      );
+      return <DragIcon id='drag-icon' />;
     }
   }
   /*
@@ -102,7 +96,22 @@ export default class Card extends Component {
    */
   renderChildContent() {
     if (this.props.children) {
-      <div className='content'>{this.props.children}</div>;
+      return <div className='content'>{this.props.children}</div>;
+    }
+  }
+  renderLanguages() {
+    if (this.languages && this.languages.length > 0) {
+      const languages = this.languages.map((language, index) => {
+        return (
+          <p
+            key={index}
+            className={`language before-circle circle-${language.circleColor} text-gray text-sm mt-20`}>
+            {language.name}
+          </p>
+        );
+      });
+
+      return <div className='flex gap-10'>{languages}</div>;
     }
   }
   /*
@@ -123,7 +132,10 @@ export default class Card extends Component {
         {this.renderDescription()}
 
         {/* Render Children */}
-        {this.renderChildContent}
+        {this.renderChildContent()}
+
+        {/* Language used in the project */}
+        {this.renderLanguages()}
       </div>
     );
   }

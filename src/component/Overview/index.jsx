@@ -5,7 +5,7 @@ import Card from './Card';
 import { ProfileCountIcon } from './icons';
 
 // Data for the cards
-import { editReadMeData, pinnedCard } from './cardData';
+import { editReadMeData, pinnedCards } from './cardData';
 
 export default function Overview() {
   return (
@@ -23,10 +23,9 @@ export default function Overview() {
       </div>
       {/* Pinned repos */}
       <div className='flex jc-sb gap-10 mt-20'>
-        <Card className='half-card' data={pinnedCard} />
-        <Card className='half-card' data={pinnedCard} />
-        <Card className='half-card' data={pinnedCard} />
-        <Card className='half-card' data={pinnedCard} />
+        {pinnedCards.map((card, index) => {
+          return <Card key={index} className='half-card' data={card} />;
+        })}
       </div>
     </div>
   );
