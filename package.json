@@ -1,8 +1,8 @@
 {
-  "name": "06.seasons",
+  "name": "github-profile-clone",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://seasons.iivexii.me",
+  "homepage": "https://git.iivexii.me",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
