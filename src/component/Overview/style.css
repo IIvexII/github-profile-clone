@@ -53,6 +53,10 @@
   .card .before-circle.circle-blue::before {
     background-color: #012cec;
   }
+  /* Cyan circle */
+  .card .before-circle.circle-cyan::before {
+    background-color: #43e6ff;
+  }
   /* Red circle */
   .card .before-circle.circle-red::before {
     background-color: #ff3a3acc;

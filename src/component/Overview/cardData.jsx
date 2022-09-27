@@ -92,25 +92,7 @@ export const pinnedCards = [
       {
         type: 'link',
         url: '/',
-        content: 'Banking-System-Project',
-      },
-    ],
-    description: 'My 2nd semester project.',
-    languages: [
-      {
-        name: 'C++',
-        circleColor: 'pink',
-      },
-    ],
-  },
-  // Repo 5
-  {
-    dragable: true,
-    breadcrumbs: [
-      {
-        type: 'link',
-        url: '/',
-        content: 'Vex-2.0',
+        content: 'Vex 2.0',
       },
     ],
     description:
@@ -123,6 +105,33 @@ export const pinnedCards = [
       {
         name: 'Python',
         circleColor: 'green',
+      },
+    ],
+  },
+  // Repo 5
+  {
+    dragable: true,
+    breadcrumbs: [
+      {
+        type: 'link',
+        url: '/',
+        content: 'Arduino Libraries',
+      },
+    ],
+    description:
+      "LGU's Robotic Society - GEARS - Arduino Libraries for competition.",
+    languages: [
+      {
+        name: 'Arduino',
+        circleColor: 'cyan',
+      },
+      {
+        name: 'C++',
+        circleColor: 'pink',
+      },
+      {
+        name: 'C',
+        circleColor: 'blue',
       },
     ],
   },
