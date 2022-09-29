@@ -1,4 +1,4 @@
-export const editReadMeData = {
+export const readMeData = {
   editable: true,
   breadcrumbs: [
     {
@@ -13,7 +13,7 @@ export const editReadMeData = {
     },
   ],
 };
-export const pinnedCards = [
+export const pinnedRepositories = [
   // Repo 1
   {
     dragable: true,

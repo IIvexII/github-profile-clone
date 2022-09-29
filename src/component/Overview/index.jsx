@@ -4,13 +4,10 @@ import './style.css';
 import Card from './Card';
 import { ProfileCountIcon } from './icons';
 
-// Data for the cards
-import { editReadMeData, pinnedCards } from './repoData';
-
-export default function Overview() {
+export default function Overview(props) {
   return (
     <div className='overview'>
-      <Card className='mt-20' data={editReadMeData}>
+      <Card className='mt-20' data={props.readMeRepo}>
         {/* Profile Count SVG */}
         <ProfileCountIcon className='mt-20' />
       </Card>
@@ -23,7 +20,7 @@ export default function Overview() {
       </div>
       {/* Pinned repos */}
       <div className='flex jc-sb wrap gap-10 mt-20'>
-        {pinnedCards.map((card, index) => {
+        {props.pinnedRepos.map((card, index) => {
           return <Card key={index} className='half-card' data={card} />;
         })}
       </div>

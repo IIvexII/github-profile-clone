@@ -12,6 +12,7 @@ import Footer from './component/Footer';
 
 // Model
 import userData from './model/User';
+import { pinnedRepositories, readMeData } from './model/Repository';
 
 export default function App() {
   return (
@@ -20,7 +21,7 @@ export default function App() {
       <Tabs />
       <main className='main'>
         <UserInfo user={userData} />
-        <Overview />
+        <Overview readMeRepo={readMeData} pinnedRepos={pinnedRepositories} />
       </main>
 
       <Footer />
