@@ -56,3 +56,24 @@
   width: 100%;
   background-color: #d4d4d4;
 }
+
+@media (max-width: 890px) {
+  .tabs {
+    padding-left: 0;
+    justify-content: center;
+  }
+  .tabs > ul {
+    gap: 4vw;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 510px) {
+  .tabs {
+    min-width: var(--min-width);
+  }
+  .tabs > ul {
+    font-size: 14px;
+    gap: 2vw;
+  }
+}

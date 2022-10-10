@@ -3,71 +3,71 @@
   width: 300px;
   margin-top: -60px;
 }
-  /* User Avatar */
-  .user-info >  .user-avatar{
-    width: 100%;
-    border: 1px solid #bebebe;
-    border-radius: 100%;
-  }
-  .user-info article {
-    margin-top: 20px;
-  }
-    /* Basic Information */
-    .name {
-      letter-spacing: 0.04rem;
-    }
-    .username {
-      color: #8a8a8a;
-      font-weight: 100;
-    }
-    .bio {
-      margin: 20px 0;
-    }
-    /* Edit Button */
-    .user-info article button{
-      padding: 10px;
-      font-size: 14px;
-      width: 300px;
-      background-color: #f0f0f0;
-      border: 1px solid #d6d6d6;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    /* Followers */
-    .user-info article #follow{
-      margin-top: 20px;
-    }
-    
-    .user-info article #follow a:first-child .icon{
-      position: relative;
-      bottom: -3px;
-    }
-    .user-info article #follow a:nth-child(2)::before{
-      content: '.';
-      margin: 0 15px;
-      position: relative;
-      top: -3px;
-    }
-    /* Address */
-    .user-info article address {
-      margin-top: 30px;
-      font-style: normal;
-    }
+/* User Avatar */
+.user-info > .user-avatar {
+  width: 100%;
+  border: 1px solid #bebebe;
+  border-radius: 100%;
+}
+.user-info article {
+  margin-top: 20px;
+}
+/* Basic Information */
+.name {
+  letter-spacing: 0.04rem;
+}
+.username {
+  color: #8a8a8a;
+  font-weight: 100;
+}
+.bio {
+  margin: 20px 0;
+}
+/* Edit Button */
+.user-info article button {
+  padding: 10px;
+  font-size: 14px;
+  width: 300px;
+  background-color: #f0f0f0;
+  border: 1px solid #d6d6d6;
+  border-radius: 6px;
+  cursor: pointer;
+}
+/* Followers */
+.user-info article #follow {
+  margin-top: 20px;
+}
 
-    .user-info article .social-info a {
-      display: block;
-    }
+.user-info article #follow a:first-child .icon {
+  position: relative;
+  bottom: -3px;
+}
+.user-info article #follow a:nth-child(2)::before {
+  content: '.';
+  margin: 0 15px;
+  position: relative;
+  top: -3px;
+}
+/* Address */
+.user-info article address {
+  margin-top: 30px;
+  font-style: normal;
+}
 
-    .user-info article .labels {
-      display: block;
-    }
+.user-info article .social-info a {
+  display: block;
+}
+
+.user-info article .labels {
+  display: block;
+}
 /* General Rules */
 .icon {
   margin-right: 10px;
 }
 .link {
   color: #5f5f5f;
-  text-decoration: none; 
+  text-decoration: none;
 }
 .link:hover {
   color: #3e7ce0 !important;
@@ -80,4 +80,10 @@
 .org-img {
   border-radius: 10px;
   width: 50px;
+}
+
+@media (max-width: 890px) {
+  .user-info {
+    margin-top: 20px;
+  }
 }
