@@ -15,10 +15,13 @@ import userData from './model/User';
 import { pinnedRepositories, readMeData } from './model/Repository';
 
 export default function App() {
+  // Array of tabs for Tab component
+  const tabs = ['Overview', 'Repositories', 'Projects', 'Packages', 'Stars'];
+
   return (
     <Fragment>
       <Header />
-      <Tabs />
+      <Tabs tabs={tabs} activeTabIndex={0} />
       <main className='main'>
         <UserInfo user={userData} />
         <Overview readMeRepo={readMeData} pinnedRepos={pinnedRepositories} />

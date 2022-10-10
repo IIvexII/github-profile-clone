@@ -1,42 +1,45 @@
 .tabs {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  display: flex;
-  justify-content: space-between;
   font-size: 16px;
   width: 100%;
+
+  padding-left: 340px;
   margin-bottom: 10px;
+
+  display: flex;
+  justify-content: left;
 }
-  .tabs > div {
-    min-width: 350px;
-  }
-  /* Whole List */
-  .tabs > ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin-top: 50px;
-  }
-  /* List element */
-  .tabs > ul > li {
-    padding: 8px 8px;
-    border-radius: 10px;
-  }
-  .tabs > ul > li:hover {
-    background-color: #f2f2f2;
-  }
-  /* Link in tab */
-  .tabs > ul > li > a {
-    color: #323232;
-    text-decoration: none;
-    font-weight: 100;
-  }
+.tabs > div {
+  min-width: 350px;
+}
+/* Whole List */
+.tabs > ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 50px;
+}
+/* List element */
+.tabs > ul > li {
+  padding: 8px 8px;
+  border-radius: 10px;
+}
+.tabs > ul > li:hover {
+  background-color: #f2f2f2;
+}
+/* Link in tab */
+.tabs > ul > li > a {
+  color: #323232;
+  text-decoration: none;
+  font-weight: 100;
+}
 
 /* general class */
 .active-tab {
   color: #000000 !important;
-  font-weight: bold!important;
+  font-weight: bold !important;
 }
 .active-tab::after {
   content: '';

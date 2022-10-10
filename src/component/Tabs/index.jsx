@@ -1,30 +1,23 @@
 import { Fragment } from 'react';
 import './style.css';
-export default function Tabs() {
+export default function Tabs(props) {
+  const tabs = props.tabs;
+  const activeTabIndex = props.activeTabIndex;
+
+  // Generat list of tabs
+  const tabList = tabs.map((tab, index) => {
+    return (
+      <li>
+        <a href='/' className={index === activeTabIndex ? 'active-tab' : ''}>
+          {tab}
+        </a>
+      </li>
+    );
+  });
   return (
     <Fragment>
       <section className='tabs'>
-        <div></div>
-        <ul>
-          <li>
-            <a href='/' className='active-tab'>
-              Overview
-            </a>
-          </li>
-          <li>
-            <a href='/'>Repositories</a>
-          </li>
-          <li>
-            <a href='/'>Projects</a>
-          </li>
-          <li>
-            <a href='/'>Packages</a>
-          </li>
-          <li>
-            <a href='/'>Stars</a>
-          </li>
-        </ul>
-        <div></div>
+        <ul>{tabList}</ul>
       </section>
       <div className='divider'></div>
     </Fragment>
