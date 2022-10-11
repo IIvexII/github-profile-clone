@@ -1,4 +1,4 @@
 node_modules
 build
-.bun.lockb
+bun.lockb
 package-lock.json
