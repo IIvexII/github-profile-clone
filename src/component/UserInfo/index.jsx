@@ -19,7 +19,10 @@ export default function UserInfo(props) {
       <article>
         <GeneralInfo name={user.name} username={user.username} bio={user.bio} />
         {/* Edit button */}
-        <button type='button'>Edit profile</button>
+
+        <button type='button' className='desktop-only'>
+          Edit profile
+        </button>
         {/* Followers */}
         <Followers followers={user.followers} following={user.following} />
         {/* Addesss and social media links */}
@@ -29,15 +32,16 @@ export default function UserInfo(props) {
           website={user.website}
         />
 
-        <Divider />
+        <div className='desktop-only'>
+          <Divider />
+          {/* Showcase */}
+          <DeveloperProgram show={user.inDeveloperProgram} />
+          <Labels labels={user.labels} />
 
-        {/* Showcase */}
-        <DeveloperProgram show={user.inDeveloperProgram} />
-        <Labels labels={user.labels} />
+          <Divider />
 
-        <Divider />
-
-        <Organizations orgs={user.orgs} />
+          <Organizations orgs={user.orgs} />
+        </div>
       </article>
     </section>
   );

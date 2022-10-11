@@ -92,13 +92,31 @@
     margin-top: 20px;
     width: 100vw;
 
+    max-width: 750px;
+    margin-inline: auto;
+
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 20px;
     align-items: center;
   }
   .user-info > .user-avatar {
-    width: 20rem;
-    height: 20rem;
+    width: 15rem;
+    height: 15rem;
+  }
+}
+@media (max-width: 600px) {
+  .user-info {
+    font-size: 0.8em;
+    min-width: var(--min-width);
+    gap: 10px;
+  }
+  .user-info > .user-avatar {
+    width: 10rem;
+    height: 10rem;
+  }
+  .user-info article #follow a:nth-child(2)::before {
+    margin: 0 2px;
   }
 }
