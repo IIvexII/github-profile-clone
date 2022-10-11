@@ -57,7 +57,7 @@
   background-color: #d4d4d4;
 }
 
-@media (max-width: 890px) {
+@media (max-width: 1024px) {
   .tabs {
     padding-left: 0;
     justify-content: center;

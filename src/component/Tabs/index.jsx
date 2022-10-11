@@ -1,4 +1,4 @@
-import { Component, Fragment } from 'react';
+import { Component } from 'react';
 import './style.css';
 
 export default class Tabs extends Component {
@@ -26,12 +26,12 @@ export default class Tabs extends Component {
 
   render() {
     return (
-      <Fragment>
+      <div className={this.props.className}>
         <section className='tabs'>
           <ul>{this.generateTabsList()}</ul>
         </section>
         <div className='divider'></div>
-      </Fragment>
+      </div>
     );
   }
 }

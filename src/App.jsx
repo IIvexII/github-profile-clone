@@ -21,9 +21,13 @@ export default function App() {
   return (
     <Fragment>
       <Header />
-      <Tabs tabs={tabs} activeTabIndex={0} />
+      <Tabs className='desktop-tabs' tabs={tabs} activeTabIndex={0} />
       <main className='main'>
         <UserInfo user={userData} />
+        <div className='for-mobile'>
+          <div className='divider'></div>
+          <Tabs tabs={tabs} activeTabIndex={0} />
+        </div>
         <Overview readMeRepo={readMeData} pinnedRepos={pinnedRepositories} />
       </main>
 

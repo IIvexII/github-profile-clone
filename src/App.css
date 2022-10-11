@@ -12,9 +12,25 @@ body {
 .main {
   display: flex;
   justify-content: space-evenly;
+  gap: 30px;
   margin: 0 30px;
 }
-
+.for-mobile {
+  display: none;
+}
+/* Responsive */
+@media (max-width: 1024px) {
+  .main {
+    flex-direction: column;
+    margin: 0;
+  }
+  .desktop-tabs {
+    display: none;
+  }
+  .for-mobile {
+    display: block;
+  }
+}
 /* general class */
 /* Circles */
 .circle::before {
