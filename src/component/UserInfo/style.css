@@ -90,7 +90,7 @@
 @media (max-width: 1024px) {
   .user-info {
     margin-top: 20px;
-    width: 100vw;
+    width: 100%;
 
     max-width: 750px;
     margin-inline: auto;
