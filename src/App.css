@@ -15,7 +15,7 @@ body {
   gap: 30px;
   margin: 0 30px;
 }
-.for-mobile {
+.mobile-only {
   display: none;
 }
 /* Responsive */
@@ -24,10 +24,10 @@ body {
     flex-direction: column;
     margin: 0;
   }
-  .desktop-tabs {
+  .desktop-only {
     display: none;
   }
-  .for-mobile {
+  .mobile-only {
     display: block;
   }
 }

@@ -21,10 +21,10 @@ export default function App() {
   return (
     <Fragment>
       <Header />
-      <Tabs className='desktop-tabs' tabs={tabs} activeTabIndex={0} />
+      <Tabs className='desktop-only' tabs={tabs} activeTabIndex={0} />
       <main className='main'>
         <UserInfo user={userData} />
-        <div className='for-mobile'>
+        <div className='mobile-only'>
           <div className='divider'></div>
           <Tabs tabs={tabs} activeTabIndex={0} />
         </div>
