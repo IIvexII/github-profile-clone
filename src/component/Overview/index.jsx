@@ -19,7 +19,7 @@ export default function Overview(props) {
         </a>
       </div>
       {/* Pinned repos */}
-      <div className='flex jc-sb wrap gap-10 mt-20'>
+      <div className='flex jc-sb wrap gap-10 mt-20 pinned-repos'>
         {props.pinnedRepos.map((card, index) => {
           return <Card key={index} className='half-card' data={card} />;
         })}
